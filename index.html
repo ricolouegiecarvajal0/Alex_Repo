@@ -13,13 +13,14 @@
 <style>
   :root {
     --navy: #0A2540;
+    --heading: #EDF1FA;
     --blue: #635BFF;
     --teal: #00D4B2;
-    --bg: #E9EEF4;
-    --card: #FFFFFF;
-    --text: #1A1F36;
-    --text-soft: #5C6478;
-    --border: #E2E5EA;
+    --bg: #121826;
+    --card: #1B2333;
+    --text: #E7EBF3;
+    --text-soft: #97A1B8;
+    --border: #2B3348;
 
     --font-display: "Plus Jakarta Sans", "Segoe UI", sans-serif;
     --font-body: "Plus Jakarta Sans", -apple-system, sans-serif;
@@ -49,13 +50,13 @@
 
   .skip-link {
     position: absolute; left: -999px; top: 0;
-    background: var(--navy); color: #fff;
+    background: var(--blue); color: #fff;
     padding: 0.75rem 1.25rem; z-index: 100;
     font-size: 0.9rem;
   }
   .skip-link:focus { left: 1rem; top: 1rem; }
 
-  h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.15; margin: 0; color: var(--navy); }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.15; margin: 0; color: var(--heading); }
 
   .label {
     font-size: 0.78rem;
@@ -71,7 +72,7 @@
     position: sticky;
     top: 0;
     z-index: 20;
-    background: rgba(248, 249, 250, 0.92);
+    background: rgba(18, 24, 38, 0.88);
     backdrop-filter: blur(6px);
     border-bottom: 1px solid var(--border);
     display: flex;
@@ -83,12 +84,12 @@
   .brand-mark {
     width: 36px; height: 36px;
     border-radius: 8px;
-    background: var(--navy);
+    background: var(--blue);
     color: #fff;
     display: flex; align-items: center; justify-content: center;
     font-family: var(--font-display); font-weight: 700; font-size: 0.9rem;
   }
-  .brand-name { font-family: var(--font-display); font-weight: 700; color: var(--navy); font-size: 1.02rem; }
+  .brand-name { font-family: var(--font-display); font-weight: 700; color: var(--heading); font-size: 1.02rem; }
 
   nav.top-links { display: flex; gap: 2rem; }
   .navlink { color: var(--text-soft); text-decoration: none; font-size: 0.92rem; font-weight: 500; }
@@ -144,7 +145,7 @@
     border: 3px solid var(--card);
     box-shadow: 0 0 0 1px var(--border);
     flex-shrink: 0;
-    background: #EEF1FF;
+    background: var(--card);
     color: var(--text-soft);
     display: flex; align-items: center; justify-content: center;
     font-size: 0.8rem;
@@ -166,19 +167,19 @@
   }
   .hero-links a {
     color: #fff;
-    background: var(--navy);
+    background: var(--blue);
     text-decoration: none;
     padding: 0.7rem 1.3rem;
     border-radius: 6px;
     font-weight: 600;
   }
   .hero-links a.secondary {
-    color: var(--navy);
+    color: var(--heading);
     background: transparent;
     border: 1px solid var(--border);
   }
-  .hero-links a:hover { background: var(--blue); }
-  .hero-links a.secondary:hover { background: transparent; border-color: var(--blue); color: var(--blue); }
+  .hero-links a:hover { filter: brightness(1.15); }
+  .hero-links a.secondary:hover { background: transparent; border-color: var(--blue); color: var(--blue); filter: none; }
 
   /* ============ ABOUT ============ */
   .about p { max-width: 65ch; color: var(--text-soft); }
@@ -186,7 +187,7 @@
 
   /* ============ SKILLS ============ */
   .skill-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 2rem; margin-top: 2rem; }
-  .skill-group h3 { font-size: 0.98rem; font-weight: 700; color: var(--navy); margin-bottom: 0.85rem; }
+  .skill-group h3 { font-size: 0.98rem; font-weight: 700; color: var(--heading); margin-bottom: 0.85rem; }
   .skill-group ul { list-style: none; padding: 0; margin: 0; }
   .skill-group li {
     display: flex;
@@ -228,8 +229,8 @@
   .tag {
     font-family: var(--font-mono);
     font-size: 0.72rem;
-    color: var(--navy);
-    background: #EEF1FF;
+    color: var(--teal);
+    background: rgba(0, 212, 178, 0.12);
     padding: 0.25rem 0.6rem;
     border-radius: 4px;
   }
