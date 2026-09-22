@@ -132,6 +132,20 @@
     opacity: 0.35;
     pointer-events: none;
   }
+  .hero-inner { display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap; }
+  .hero-photo {
+    width: 148px; height: 148px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--card);
+    box-shadow: 0 0 0 1px var(--border);
+    flex-shrink: 0;
+    background: #EEF1FF;
+    color: var(--text-soft);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.8rem;
+  }
+  .hero-text { flex: 1 1 320px; }
   .hero h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); position: relative; max-width: 16ch; }
   .hero .tagline {
     font-size: 1.15rem;
@@ -268,12 +282,18 @@
 <main id="main">
 
   <section class="hero" id="hero">
-    <span class="label">BSIT Student — Eastern Samar State University</span>
-    <h1>Alexandra P. Barong</h1>
-    <p class="tagline">I'm eager to learn and do my best. Every day is a chance to get better.</p>
-    <div class="hero-links">
-      <a href="mailto:alexandrabarong30@gmail.com">Email me</a>
-      <a class="secondary" href="https://github.com/alexandrabarong">GitHub</a>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="label">BSIT Student — Eastern Samar State University</span>
+        <h1>Alexandra P. Barong</h1>
+        <p class="tagline">I'm eager to learn and do my best. Every day is a chance to get better.</p>
+        <div class="hero-links">
+          <a href="mailto:alexandrabarong30@gmail.com">Email me</a>
+          <a class="secondary" href="https://github.com/alexandrabarong">GitHub</a>
+        </div>
+      </div>
+      <!-- REPLACE src="" with your photo's file name, e.g. src="photo.jpg" -->
+      <img class="hero-photo" src="images/photo.jpg" alt="Alexandra P. Barong">
     </div>
   </section>
 
