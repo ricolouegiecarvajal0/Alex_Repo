@@ -15,7 +15,7 @@
     --navy: #0A2540;
     --blue: #635BFF;
     --teal: #00D4B2;
-    --bg: #F8F9FA;
+    --bg: #E9EEF4;
     --card: #FFFFFF;
     --text: #1A1F36;
     --text-soft: #5C6478;
@@ -112,28 +112,32 @@
     position: relative;
     overflow: hidden;
   }
-  .hero::after {
+  .hero-inner { display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap; }
+  .photo-wrap { position: relative; flex-shrink: 0; }
+  .photo-wrap::before {
     content: "";
     position: absolute;
-    top: 30%; right: -60px;
-    width: 260px; height: 260px;
+    top: 50%; left: 50%;
+    width: 290px; height: 290px;
     border: 1px solid var(--border);
     border-radius: 50%;
-    opacity: 0.7;
+    transform: translate(-50%, -50%);
     pointer-events: none;
   }
-  .hero::before {
+  .photo-wrap::after {
     content: "";
     position: absolute;
-    top: 45%; right: 40px;
-    width: 160px; height: 160px;
+    top: 50%; left: 50%;
+    width: 195px; height: 195px;
     border: 1px solid var(--teal);
     border-radius: 50%;
-    opacity: 0.35;
+    opacity: 0.45;
+    transform: translate(-65%, -35%);
     pointer-events: none;
   }
-  .hero-inner { display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap; }
   .hero-photo {
+    position: relative;
+    z-index: 1;
     width: 230px; height: 230px;
     border-radius: 50%;
     object-fit: cover;
@@ -293,7 +297,9 @@
         </div>
       </div>
       <!-- REPLACE src="" with your photo's file name, e.g. src="photo.jpg" -->
-      <img class="hero-photo" src="images/photo.jpg" alt="Alexandra P. Barong">
+      <div class="photo-wrap">
+        <img class="hero-photo" src="images/photo.jpg" alt="Alexandra P. Barong">
+      </div>
     </div>
   </section>
 
